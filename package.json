@@ -1,0 +1,41 @@
+{
+  "name": "parallel-state",
+  "version": "1.0.0",
+  "description": "Parallel State: runs in a worker, different state model",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rish-0-0/parallel-state.git"
+  },
+  "keywords": [
+    "Worker",
+    "State"
+  ],
+  "author": "Rishabh Anand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rish-0-0/parallel-state/issues"
+  },
+  "homepage": "https://github.com/rish-0-0/parallel-state#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "typescript": "^4.2.3"
+  },
+  "npmName": "parallel-state",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ],
+  "dependencies": {
+    "comlink": "^4.3.0"
+  }
+}
