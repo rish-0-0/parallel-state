@@ -2,7 +2,9 @@
   "name": "parallel-state",
   "version": "1.0.0",
   "description": "Parallel State: runs in a worker, different state model",
-  "main": "index.js",
+  "main": "lib/parallel-state.js",
+  "module": "es/parallel-state.js",
+  "unpkg": "dist/parallel-state.js",
   "types": "types/index.d.ts",
   "files": [
     "dist",

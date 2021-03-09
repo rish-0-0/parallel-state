@@ -52,7 +52,7 @@ export default [
   // ES
   {
     input: "src/index.ts",
-    output: { file: "es/redux.js", format: "es", indent: false },
+    output: { file: "es/parallel-state.js", format: "es", indent: false },
     external: makeExternalPredicate([
       ...Object.keys(pkg.dependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
@@ -71,6 +71,26 @@ export default [
           ],
         ],
         babelHelpers: "runtime",
+      }),
+    ],
+  },
+  // UMD
+  {
+    input: 'src/index.ts',
+    output: {
+      file: 'dist/parallel-state.js',
+      format: 'umd',
+      name: 'Parallel State',
+      indent: false,
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+      }),
+      typescript({ tsconfigOverride: noDeclarationFiles }),
+      babel({
+        extensions,
+        exclude: 'node_modules/**',
       }),
     ],
   },
